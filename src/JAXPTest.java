@@ -59,17 +59,20 @@ public class JAXPTest extends Applet {
             Node txt = el_name.getFirstChild();
             System.out.println("MSRSTENAME: " + txt.getNodeValue());
 
+            //지역구 코드
             names = p.getElementsByTagName("MSRADMCODE");
             el_name = (Element) names.item(0);
             txt = el_name.getFirstChild();
             System.out.println("MSRADMCODE: " + txt.getNodeValue());
 
+            //통합대기환경지수
             names = p.getElementsByTagName("MAXINDEX");
             el_name = (Element) names.item(0);
             txt = el_name.getFirstChild();
 
             System.out.println("MAXINDEX: " + txt.getNodeValue());
 
+            //평균
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("GRADE");
             el_name = (Element) names.item(0);
@@ -77,6 +80,7 @@ public class JAXPTest extends Applet {
 
             System.out.println("GRADE: " + txt.getNodeValue());
 
+            //지수결정물질
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("POLLUTANT");
             el_name = (Element) names.item(0);
@@ -84,6 +88,7 @@ public class JAXPTest extends Applet {
 
             System.out.println("POLLUTANT: " + txt.getNodeValue());
 
+            //이산화질소 농도(단위 : ppm)
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("NITROGEN");
             el_name = (Element) names.item(0);
@@ -91,6 +96,7 @@ public class JAXPTest extends Applet {
 
             System.out.println("NITROGEN: " + txt.getNodeValue());
 
+            //오존 농도(단위 : ppm)
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("OZONE");
             el_name = (Element) names.item(0);
@@ -98,6 +104,7 @@ public class JAXPTest extends Applet {
 
             System.out.println("OZONE: " + txt.getNodeValue());
 
+            //일산화탄소 농도(단위 : ppm)
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("CARBON");
             el_name = (Element) names.item(0);
@@ -105,6 +112,7 @@ public class JAXPTest extends Applet {
 
             System.out.println("CARBON: " + txt.getNodeValue());
 
+            //아황산가스 농도 농도(단위 : ppm)
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("SULFUROUS");
             el_name = (Element) names.item(0);
@@ -112,6 +120,15 @@ public class JAXPTest extends Applet {
 
             System.out.println("SULFUROUS: " + txt.getNodeValue());
 
+            //미세먼지 농도 농도(단위 : ㎍/㎥)
+            p = (Element) n_list.item(i);
+            names = p.getElementsByTagName("PM10");
+            el_name = (Element) names.item(0);
+            txt = el_name.getFirstChild();
+
+            System.out.println("PM10: " + txt.getNodeValue());
+            
+            //초미세먼지 농도 농도(단위 : ㎍/㎥)
             p = (Element) n_list.item(i);
             names = p.getElementsByTagName("PM25");
             el_name = (Element) names.item(0);
