@@ -39,12 +39,16 @@ public class JAXPTest extends Applet {
         NodeList n_list = root.getElementsByTagName("row");
         System.out.println("n_list: " + n_list.getLength());
         /** start **/
+        //얻어낸 row의 갯수만큼 for문을 돌려줌
+        
         for (int i = 0; i < n_list.getLength(); i++) {
 
             System.out.println("i: " + i);
             Element p = (Element) n_list.item(i);
 //            Node s_node = n_list.item(0);
 
+            //얻어낸 row의 자식들 중에 MSRSTENAME을 구하고 싶을 경우(서울시 어느구)
+            //names란 배열 생성, 객채선택 안해주면 NULLPOINTER 에러남
             NodeList names = p.getElementsByTagName("MSRSTENAME");
 
             Element el_name = (Element) names.item(i);
